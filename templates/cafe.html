@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ cafe.img_url }}');
+    height:80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;">
+
+</header>
+
+<!-- Cafe Content -->
+<section>
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <h3 class="fw-bold">Details</h3>
+        <p><strong>🏡 Cafe:</strong> {{ cafe.name }}</p>
+        <p><strong>📍 Address:</strong> {{ cafe.location }}</p>
+        <p><strong>☕ Coffee Price:</strong> {{ cafe.coffee_price }}</p>
+        <p><strong>🪑 Seats:</strong> {{ cafe.seats }}</p>
+        <p><strong>🚻 Toilet:</strong> {{ "Yes" if cafe.has_toilet else "No" }}</p>
+        <p><strong>🌐 Wifi:</strong> {{ "Yes" if cafe.has_wifi else "No" }}</p>
+        <p><strong>🔌 Sockets:</strong> {{ "Yes" if cafe.has_sockets else "No" }}</p>
+        <p><strong>📞 Calls Allowed:</strong> {{ "Yes" if cafe.can_take_calls else "No" }}</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}

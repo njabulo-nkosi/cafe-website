@@ -1,0 +1,35 @@
+/* Styling the Heading (h1) */
+h1 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Styling the Subheading (h2 or h3) */
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 300; /* Light font weight */
+
+  text-align: left;  /*justify */
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+/* Styling the Paragraph (p) */
+p {
+  font-family: 'Verdana', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #22177A !important; /* Sets the button color */
+    border-color: #22177A !important;   /* Ensures the border matches */
+    color: #ffffff !important;         /* Ensures the text is readable */
+}

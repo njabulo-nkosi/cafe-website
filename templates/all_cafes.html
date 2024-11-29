@@ -1,0 +1,51 @@
+{% include "header.html" %}
+
+<header
+  class="masthead d-block w-100"
+  style="background-image: url('static/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat">
+</header>
+
+<div class="container px-4 px-lg-5 mt-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+
+      {% for cafe in all_cafes %}
+      <div class="fw-bold">
+        <a href="{{ url_for('show_cafe', cafe_id=cafe.id) }}" style="text-decoration: none;">
+          <h1 style="font-family: 'Arial', sans-serif; font-weight: bold; color: black; text-align: left;">{{ cafe.name }}</h1>
+          <p style="color: #636363;">{{ cafe.location }}</p>
+        </a>
+        {% if admin_access %}
+        <p>
+          <a href="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" style="text-decoration: none; color: #636363;">✘</a>
+        </p>
+        {% endif %}
+
+      </div>
+
+      <hr class="my-4" />
+      {% endfor %}
+
+
+      <div class="d-flex justify-content-end mb-4">
+        <a
+          class="btn btn-primary float-right" style="background-color: #22177A; border-color:#22177A;"
+          href="{{ url_for('add_cafe') }}"
+          >Add New Cafe</a
+        >
+      </div>
+
+      <!-- Pager-->
+      <div class="d-flex justify-content-end mb-4">
+        <a class="btn btn-secondary" href="{{ url_for('get_all_cafes') }}">More  →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
+

@@ -1,0 +1,87 @@
+{% include "header.html" %}
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/jakub-dziubak-XtUd5SiX464-unsplash.jpg" alt="Coffee cup" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 style="color: black;">Welcome to the World of Coffee!</h1>
+            <p class="opacity-75" style="color: black;">Explore cafes that offer the best coffee and free Wi-Fi.</p>
+            <p><a class="btn btn-lg btn-primary" style="background-color: #22177A; border-color: #22177A;" href="{{ url_for('get_all_cafes') }}">Explore More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/yasara-hansani-Y81s6NPBRC8-unsplash.jpg" alt="Wifi sign" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Where Coffee Meets Connectivity.</h1>
+            <p>Strong coffee, strong Wi-Fi—your workday just got better.</p>
+            <p><a class="btn btn-lg btn-primary" style="background-color: #22177A; border-color: #22177A;" href="{{ url_for('get_all_cafes') }}">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="static/mario-ibrahimi-2RrAct0Rf8E-unsplash.jpg" alt="Cup of coffee" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>The Perfect Brew Awaits.</h1>
+            <p>Enjoy a perfect latte while staying productive online.</p>
+            <p><a class="btn btn-lg btn-primary" style="background-color: #22177A; border-color: #22177A;" href="{{ url_for('get_all_cafes') }}">Browse Cafes</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container marketing mt-5">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle"
+             width="140" height="140"
+             src="{{ url_for('static', filename='albert-s-FkNfVgHVzkI-unsplash.jpg') }}"
+             alt="Coffe cup" role="img" aria-label="Placeholder">
+        <h2 class="fw-bold" style="text-align: center;">Coffee</h2>
+        <p style="text-align: center;">Explore cafes that offer the best coffee; coffee is more than just a drink. Find your favorite brew.</p>
+        <p style="text-align: center;"><a class="btn btn-secondary" style="background-color: #22177A;" href="{{ url_for('get_all_cafes') }}">See Cafes</a></p>
+      </div>
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle"
+             width="140" height="140"
+             src="{{ url_for('static', filename='mike-petrucci-c9FQyqIECds-unsplash.jpg') }}"
+             alt="Open sign" role="img" aria-label="Placeholder">
+        <h2 class="fw-bold" style="text-align: center;">Connect</h2>
+        <p style="text-align: center;">Discover cozy corners to work or unwind with your favorite brew. Cafes with a cozy vibe</p>
+        <p style="text-align: center;"><a class="btn btn-secondary" style="background-color: #22177A;" href="{{ url_for('add_cafe') }}">Add A Cafe</a></p>
+      </div>
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle"
+             width="140" height="140"
+             src="{{ url_for('static', filename='kelly-sikkema-K1GfTjJHmAw-unsplash.jpg') }}"
+             alt="Wifi broccoli" role="img" aria-label="Placeholder">
+
+        <h2 class="fw-bold" style="text-align: center;">Wifi</h2>
+        <p style="text-align: center;">Find cafes where connection isn’t just about the internet. Sip, relax, and stay connected.</p>
+        <p style="text-align: center;"><a class="btn btn-secondary" style="background-color: #22177A;" href="#">Connect</a></p>
+      </div>
+    </div>
+
+  </div>
+
+{% include "footer.html" %}

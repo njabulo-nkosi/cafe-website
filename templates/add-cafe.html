@@ -1,0 +1,25 @@
+{% include "header.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+<!-- Page Header -->
+<header
+    class="masthead d-block w-100"
+    style="background-image: url('static/cristian-escobar-abkEAOjnY0s-unsplash.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat">
+</header>
+
+<main class="mb-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+            <h1>New Cafe</h1>
+
+        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+    </div>
+  </div>
+</main>
+{% include "footer.html" %}
